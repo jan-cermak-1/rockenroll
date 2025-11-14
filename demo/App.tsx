@@ -1,6 +1,6 @@
 import React from 'react';
-import { ComponentShowcase } from './ComponentShowcase';
+import { StorybookApp } from './Storybook';
 
 export function App() {
-  return <ComponentShowcase />;
+  return <StorybookApp />;
 }
