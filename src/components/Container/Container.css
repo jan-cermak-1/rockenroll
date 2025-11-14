@@ -1,0 +1,42 @@
+.soul-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.soul-container--sm {
+  max-width: 640px;
+}
+
+.soul-container--md {
+  max-width: 768px;
+}
+
+.soul-container--lg {
+  max-width: 1024px;
+}
+
+.soul-container--xl {
+  max-width: 1280px;
+}
+
+.soul-container--full {
+  max-width: 100%;
+}
+
+.soul-container--padding-none {
+  padding: 0;
+}
+
+.soul-container--padding-sm {
+  padding: 1rem;
+}
+
+.soul-container--padding-md {
+  padding: 2rem;
+}
+
+.soul-container--padding-lg {
+  padding: 3rem;
+}
+

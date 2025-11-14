@@ -1,0 +1,55 @@
+.soul-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.soul-link--primary {
+  color: #0066ff;
+}
+
+.soul-link--primary:hover {
+  color: #0052cc;
+}
+
+.soul-link--secondary {
+  color: #6c757d;
+}
+
+.soul-link--secondary:hover {
+  color: #5a6268;
+}
+
+.soul-link--danger {
+  color: #dc3545;
+}
+
+.soul-link--danger:hover {
+  color: #c82333;
+}
+
+.soul-link--underline-always {
+  text-decoration: underline;
+}
+
+.soul-link--underline-hover {
+  text-decoration: none;
+}
+
+.soul-link--underline-hover:hover {
+  text-decoration: underline;
+}
+
+.soul-link--underline-none {
+  text-decoration: none;
+}
+
+.soul-link__icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+

@@ -1,0 +1,155 @@
+.showcase {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.showcase-sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.showcase-sidebar-header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.showcase-sidebar-header h2 {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.showcase-sidebar-header p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.875rem;
+}
+
+.showcase-nav {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.showcase-nav-item {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.showcase-nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.showcase-nav-item.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-left-color: white;
+}
+
+.showcase-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.showcase-footer p {
+  margin: 0.25rem 0;
+}
+
+.showcase-version {
+  font-family: 'Courier New', monospace;
+}
+
+.showcase-main {
+  flex: 1;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+.showcase-section {
+  display: none;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.showcase-section.active {
+  display: block;
+}
+
+.showcase-title {
+  font-size: 2.5rem;
+  margin: 0 0 2rem 0;
+  color: #1a1a1a;
+}
+
+.showcase-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.showcase-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.showcase-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.showcase-container-demo {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 2rem !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .showcase {
+    flex-direction: column;
+  }
+
+  .showcase-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+  }
+
+  .showcase-section {
+    padding: 1.5rem;
+  }
+
+  .showcase-title {
+    font-size: 1.75rem;
+  }
+}
+
