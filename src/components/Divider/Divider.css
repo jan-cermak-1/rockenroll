@@ -1,0 +1,17 @@
+.soul-divider {
+  border: none;
+  background-color: #e8e8e8;
+  margin: 0;
+}
+
+.soul-divider--horizontal {
+  width: 100%;
+  height: 1px;
+}
+
+.soul-divider--vertical {
+  width: 1px;
+  height: 100%;
+  display: inline-block;
+}
+

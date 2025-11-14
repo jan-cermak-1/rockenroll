@@ -1,0 +1,63 @@
+{
+  "name": "rockenroll",
+  "version": "1.0.0",
+  "description": "Complete copy of Soul Design System components - React component library",
+  "type": "module",
+  "main": "./dist/rockenroll.umd.js",
+  "module": "./dist/rockenroll.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/rockenroll.es.js",
+      "require": "./dist/rockenroll.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "demo:dev": "vite demo",
+    "demo:build": "vite build --config vite.demo.config.ts",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "components",
+    "ui",
+    "soul",
+    "rockenroll",
+    "typescript"
+  ],
+  "author": "Jan Čermák",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.8.1"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0"
+  }
+}
+

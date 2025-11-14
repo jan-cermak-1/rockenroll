@@ -1,0 +1,98 @@
+/* Toggle Component Styles - Soul Design System */
+
+.soul-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.soul-toggle--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.soul-toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.soul-toggle__switch {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: #d1d1d1;
+  border-radius: 100px;
+  transition: background-color 0.2s ease;
+}
+
+.soul-toggle--small .soul-toggle__switch {
+  width: 36px;
+  height: 20px;
+}
+
+.soul-toggle--medium .soul-toggle__switch {
+  width: 44px;
+  height: 24px;
+}
+
+.soul-toggle--large .soul-toggle__switch {
+  width: 52px;
+  height: 28px;
+}
+
+.soul-toggle__input:checked + .soul-toggle__switch {
+  background-color: #0066ff;
+}
+
+.soul-toggle__input:focus-visible + .soul-toggle__switch {
+  outline: 2px solid #0066ff;
+  outline-offset: 2px;
+}
+
+.soul-toggle__slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.soul-toggle--small .soul-toggle__slider {
+  width: 16px;
+  height: 16px;
+}
+
+.soul-toggle--medium .soul-toggle__slider {
+  width: 20px;
+  height: 20px;
+}
+
+.soul-toggle--large .soul-toggle__slider {
+  width: 24px;
+  height: 24px;
+}
+
+.soul-toggle--small .soul-toggle__input:checked + .soul-toggle__switch .soul-toggle__slider {
+  transform: translateX(16px);
+}
+
+.soul-toggle--medium .soul-toggle__input:checked + .soul-toggle__switch .soul-toggle__slider {
+  transform: translateX(20px);
+}
+
+.soul-toggle--large .soul-toggle__input:checked + .soul-toggle__switch .soul-toggle__slider {
+  transform: translateX(24px);
+}
+
+.soul-toggle__label {
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+

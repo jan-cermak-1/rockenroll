@@ -1,0 +1,46 @@
+/* Soul Design System - Global Styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: var(--soul-font-family);
+  font-size: var(--soul-font-size-md);
+  line-height: var(--soul-line-height-normal);
+  color: var(--soul-color-black);
+  background-color: var(--soul-color-white);
+}
+
+/* Reset */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: var(--soul-font-weight-semibold);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--soul-color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

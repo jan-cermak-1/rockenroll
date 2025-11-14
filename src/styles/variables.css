@@ -1,0 +1,78 @@
+/* Soul Design System - CSS Variables */
+
+:root {
+  /* Colors - Primary */
+  --soul-color-primary: #0066ff;
+  --soul-color-primary-hover: #0052cc;
+  --soul-color-primary-active: #003d99;
+  
+  /* Colors - Semantic */
+  --soul-color-success: #28a745;
+  --soul-color-warning: #ffc107;
+  --soul-color-danger: #dc3545;
+  --soul-color-info: #17a2b8;
+  
+  /* Colors - Neutral */
+  --soul-color-white: #ffffff;
+  --soul-color-black: #1a1a1a;
+  --soul-color-gray-100: #f5f5f5;
+  --soul-color-gray-200: #e8e8e8;
+  --soul-color-gray-300: #d1d1d1;
+  --soul-color-gray-400: #b8b8b8;
+  --soul-color-gray-500: #999999;
+  --soul-color-gray-600: #666666;
+  
+  /* Spacing */
+  --soul-spacing-xs: 0.25rem;
+  --soul-spacing-sm: 0.5rem;
+  --soul-spacing-md: 1rem;
+  --soul-spacing-lg: 1.5rem;
+  --soul-spacing-xl: 2rem;
+  --soul-spacing-2xl: 3rem;
+  
+  /* Typography */
+  --soul-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  
+  --soul-font-size-xs: 0.75rem;
+  --soul-font-size-sm: 0.875rem;
+  --soul-font-size-md: 1rem;
+  --soul-font-size-lg: 1.125rem;
+  --soul-font-size-xl: 1.25rem;
+  --soul-font-size-2xl: 1.5rem;
+  --soul-font-size-3xl: 2rem;
+  
+  --soul-font-weight-normal: 400;
+  --soul-font-weight-medium: 500;
+  --soul-font-weight-semibold: 600;
+  --soul-font-weight-bold: 700;
+  
+  --soul-line-height-tight: 1.25;
+  --soul-line-height-normal: 1.5;
+  --soul-line-height-relaxed: 1.75;
+  
+  /* Border Radius */
+  --soul-radius-sm: 4px;
+  --soul-radius-md: 6px;
+  --soul-radius-lg: 8px;
+  --soul-radius-xl: 12px;
+  --soul-radius-full: 9999px;
+  
+  /* Shadows */
+  --soul-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --soul-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --soul-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --soul-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --soul-transition-fast: 0.15s ease;
+  --soul-transition-base: 0.2s ease;
+  --soul-transition-slow: 0.3s ease;
+  
+  /* Z-index */
+  --soul-z-dropdown: 100;
+  --soul-z-modal: 1000;
+  --soul-z-tooltip: 1100;
+  --soul-z-notification: 1200;
+}
+

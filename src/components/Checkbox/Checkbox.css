@@ -1,0 +1,92 @@
+/* Checkbox Component Styles - Soul Design System */
+
+.soul-checkbox {
+  display: inline-block;
+}
+
+.soul-checkbox__label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.soul-checkbox--disabled .soul-checkbox__label {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.soul-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.soul-checkbox__box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 2px solid #d1d1d1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.soul-checkbox__input:focus-visible + .soul-checkbox__box {
+  outline: 2px solid #0066ff;
+  outline-offset: 2px;
+}
+
+.soul-checkbox__input:checked + .soul-checkbox__box,
+.soul-checkbox__input:indeterminate + .soul-checkbox__box {
+  background-color: #0066ff;
+  border-color: #0066ff;
+}
+
+.soul-checkbox__input:disabled + .soul-checkbox__box {
+  background-color: #f5f5f5;
+  border-color: #e8e8e8;
+}
+
+.soul-checkbox--error .soul-checkbox__box {
+  border-color: #dc3545;
+}
+
+.soul-checkbox__icon {
+  width: 14px;
+  height: 14px;
+  color: #ffffff;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.15s ease;
+}
+
+.soul-checkbox__input:checked + .soul-checkbox__box .soul-checkbox__icon,
+.soul-checkbox__input:indeterminate + .soul-checkbox__box .soul-checkbox__icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.soul-checkbox__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.soul-checkbox__helper-text {
+  margin-top: 0.25rem;
+  margin-left: 1.75rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.soul-checkbox--error .soul-checkbox__helper-text {
+  color: #dc3545;
+}
+

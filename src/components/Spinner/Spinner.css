@@ -1,0 +1,65 @@
+/* Spinner Component Styles - Soul Design System */
+
+.soul-spinner {
+  display: inline-block;
+}
+
+.soul-spinner--small {
+  width: 16px;
+  height: 16px;
+}
+
+.soul-spinner--medium {
+  width: 32px;
+  height: 32px;
+}
+
+.soul-spinner--large {
+  width: 48px;
+  height: 48px;
+}
+
+.soul-spinner__svg {
+  width: 100%;
+  height: 100%;
+  animation: soul-spinner-rotate 2s linear infinite;
+}
+
+@keyframes soul-spinner-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.soul-spinner__circle {
+  stroke-linecap: round;
+  animation: soul-spinner-dash 1.5s ease-in-out infinite;
+}
+
+.soul-spinner--primary .soul-spinner__circle {
+  stroke: #0066ff;
+}
+
+.soul-spinner--secondary .soul-spinner__circle {
+  stroke: #6c757d;
+}
+
+.soul-spinner--white .soul-spinner__circle {
+  stroke: #ffffff;
+}
+
+@keyframes soul-spinner-dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+

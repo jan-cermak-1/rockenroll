@@ -1,0 +1,86 @@
+/* Tooltip Component Styles - Soul Design System */
+
+.soul-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.soul-tooltip__content {
+  position: absolute;
+  z-index: 1000;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+}
+
+.soul-tooltip__content--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Placements */
+.soul-tooltip__content--top {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.soul-tooltip__content--bottom {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.soul-tooltip__content--left {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.soul-tooltip__content--right {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Arrow */
+.soul-tooltip__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #1a1a1a;
+  transform: rotate(45deg);
+}
+
+.soul-tooltip__content--top .soul-tooltip__arrow {
+  bottom: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.soul-tooltip__content--bottom .soul-tooltip__arrow {
+  top: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.soul-tooltip__content--left .soul-tooltip__arrow {
+  right: -4px;
+  top: 50%;
+  margin-top: -4px;
+}
+
+.soul-tooltip__content--right .soul-tooltip__arrow {
+  left: -4px;
+  top: 50%;
+  margin-top: -4px;
+}
+
