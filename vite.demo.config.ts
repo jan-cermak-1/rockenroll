@@ -5,6 +5,7 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [react()],
   root: 'demo',
+  base: '/rockenroll/',
   build: {
     outDir: '../dist-demo',
     emptyOutDir: true,
