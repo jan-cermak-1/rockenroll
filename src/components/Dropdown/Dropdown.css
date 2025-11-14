@@ -1,0 +1,121 @@
+.soul-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.soul-dropdown--full-width {
+  width: 100%;
+}
+
+.soul-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.soul-dropdown__trigger:hover:not(:disabled) {
+  border-color: #b8b8b8;
+}
+
+.soul-dropdown__trigger:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+}
+
+.soul-dropdown__trigger:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.soul-dropdown--error .soul-dropdown__trigger {
+  border-color: #dc3545;
+}
+
+.soul-dropdown--open .soul-dropdown__trigger {
+  border-color: #0066ff;
+}
+
+.soul-dropdown__value {
+  flex: 1;
+  text-align: left;
+}
+
+.soul-dropdown__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.soul-dropdown--open .soul-dropdown__icon {
+  transform: rotate(180deg);
+}
+
+.soul-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  animation: dropdown-slide-down 0.2s ease;
+}
+
+@keyframes dropdown-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.soul-dropdown__option {
+  width: 100%;
+  padding: 0.75rem;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.soul-dropdown__option:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.soul-dropdown__option--selected {
+  background-color: #e3f2fd;
+  color: #0066ff;
+  font-weight: 600;
+}
+
+.soul-dropdown__option--disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+

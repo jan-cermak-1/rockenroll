@@ -1,0 +1,53 @@
+.soul-card {
+  display: block;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.soul-card--default {
+  border: 1px solid #e8e8e8;
+}
+
+.soul-card--outlined {
+  border: 2px solid #d1d1d1;
+}
+
+.soul-card--elevated {
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.soul-card--padding-none {
+  padding: 0;
+}
+
+.soul-card--padding-sm {
+  padding: 1rem;
+}
+
+.soul-card--padding-md {
+  padding: 1.5rem;
+}
+
+.soul-card--padding-lg {
+  padding: 2rem;
+}
+
+.soul-card--clickable {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+
+.soul-card--clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.soul-card--clickable:active {
+  transform: translateY(0);
+}
+

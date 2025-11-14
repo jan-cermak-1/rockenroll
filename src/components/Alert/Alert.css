@@ -1,0 +1,78 @@
+.soul-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid;
+}
+
+.soul-alert--info {
+  background-color: #e3f2fd;
+  border-color: #0066ff;
+  color: #004bb5;
+}
+
+.soul-alert--success {
+  background-color: #e8f5e9;
+  border-color: #28a745;
+  color: #1e7e34;
+}
+
+.soul-alert--warning {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+  color: #856404;
+}
+
+.soul-alert--error {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.soul-alert__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.soul-alert__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.soul-alert__content {
+  flex: 1;
+}
+
+.soul-alert__title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.soul-alert__message {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.soul-alert__close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.soul-alert__close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+

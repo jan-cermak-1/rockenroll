@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 import {
-  Button,
+  Accordion,
+  Alert,
   Avatar,
   Badge,
   Banner,
+  Breadcrumb,
+  Button,
+  Card,
   Checkbox,
   Container,
   Divider,
+  Dropdown,
+  EmptyState,
   Input,
   Link,
   Modal,
   ProgressBar,
   Radio,
+  Select,
+  SkeletonLoader,
   Spinner,
+  Tabs,
+  Textarea,
   Toggle,
   Tooltip,
 } from '../src';
@@ -29,6 +39,8 @@ export function ComponentShowcase() {
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState('option1');
   const [toggleValue, setToggleValue] = useState(false);
+  const [dropdownValue, setDropdownValue] = useState('');
+  const [selectValue, setSelectValue] = useState('');
 
   const sections: ComponentSection[] = [
     {
@@ -207,9 +219,102 @@ export function ComponentShowcase() {
           <Link href="#" variant="secondary">Secondary Link</Link>
           <Link href="#" variant="danger">Danger Link</Link>
           <Link href="https://github.com" external>External Link</Link>
-          <Link href="#" underline="always">Always Underlined</Link>
-          <Link href="#" underline="none">No Underline</Link>
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '#' },
+              { label: 'Products', href: '#' },
+              { label: 'Details' },
+            ]}
+          />
         </div>
+      ),
+    },
+    {
+      id: 'advanced',
+      title: 'Advanced Components',
+      render: () => (
+        <div className="showcase-stack">
+          <Dropdown
+            options={[
+              { value: '1', label: 'Option 1' },
+              { value: '2', label: 'Option 2' },
+              { value: '3', label: 'Option 3' },
+            ]}
+            value={dropdownValue}
+            onChange={setDropdownValue}
+            placeholder="Select option"
+            fullWidth
+          />
+          <Select
+            options={[
+              { value: '', label: 'Choose...' },
+              { value: '1', label: 'Option 1' },
+              { value: '2', label: 'Option 2' },
+            ]}
+            label="Select Field"
+            value={selectValue}
+            onChange={setSelectValue}
+            fullWidth
+          />
+          <Textarea
+            label="Message"
+            placeholder="Enter your message..."
+            fullWidth
+          />
+          <Tabs
+            items={[
+              { id: 'tab1', label: 'Tab 1', content: <p>Content of tab 1</p> },
+              { id: 'tab2', label: 'Tab 2', content: <p>Content of tab 2</p> },
+              { id: 'tab3', label: 'Tab 3', content: <p>Content of tab 3</p> },
+            ]}
+          />
+          <Accordion
+            items={[
+              { id: '1', title: 'Section 1', content: <p>Content 1</p> },
+              { id: '2', title: 'Section 2', content: <p>Content 2</p> },
+            ]}
+          />
+        </div>
+      ),
+    },
+    {
+      id: 'cards',
+      title: 'Cards & Alerts',
+      render: () => (
+        <div className="showcase-stack">
+          <Card variant="elevated" padding="md">
+            <h3 style={{ margin: '0 0 0.5rem 0' }}>Card Title</h3>
+            <p style={{ margin: 0 }}>This is a card with elevated shadow.</p>
+          </Card>
+          <Alert variant="info" title="Information">
+            This is an informational alert message.
+          </Alert>
+          <Alert variant="success">Operation completed successfully!</Alert>
+          <Alert variant="warning">Please review the changes.</Alert>
+          <Alert variant="error">An error occurred.</Alert>
+        </div>
+      ),
+    },
+    {
+      id: 'loading',
+      title: 'Loading States',
+      render: () => (
+        <div className="showcase-stack">
+          <SkeletonLoader variant="text" count={3} />
+          <SkeletonLoader variant="circular" />
+          <SkeletonLoader variant="rectangular" height={100} />
+        </div>
+      ),
+    },
+    {
+      id: 'empty',
+      title: 'Empty States',
+      render: () => (
+        <EmptyState
+          title="No data available"
+          description="There are no items to display at the moment."
+          action={<Button>Add Item</Button>}
+        />
       ),
     },
   ];
