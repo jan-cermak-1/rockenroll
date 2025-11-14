@@ -1,0 +1,76 @@
+.soul-stack {
+  display: flex;
+}
+
+.soul-stack--vertical {
+  flex-direction: column;
+}
+
+.soul-stack--horizontal {
+  flex-direction: row;
+}
+
+.soul-stack--spacing-none {
+  gap: 0;
+}
+
+.soul-stack--spacing-xs {
+  gap: 0.25rem;
+}
+
+.soul-stack--spacing-sm {
+  gap: 0.5rem;
+}
+
+.soul-stack--spacing-md {
+  gap: 1rem;
+}
+
+.soul-stack--spacing-lg {
+  gap: 1.5rem;
+}
+
+.soul-stack--spacing-xl {
+  gap: 2rem;
+}
+
+.soul-stack--align-start {
+  align-items: flex-start;
+}
+
+.soul-stack--align-center {
+  align-items: center;
+}
+
+.soul-stack--align-end {
+  align-items: flex-end;
+}
+
+.soul-stack--align-stretch {
+  align-items: stretch;
+}
+
+.soul-stack--justify-start {
+  justify-content: flex-start;
+}
+
+.soul-stack--justify-center {
+  justify-content: center;
+}
+
+.soul-stack--justify-end {
+  justify-content: flex-end;
+}
+
+.soul-stack--justify-space-between {
+  justify-content: space-between;
+}
+
+.soul-stack--justify-space-around {
+  justify-content: space-around;
+}
+
+.soul-stack--wrap {
+  flex-wrap: wrap;
+}
+

@@ -1,0 +1,15 @@
+.soul-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.soul-icon--clickable {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.soul-icon--clickable:hover {
+  opacity: 0.7;
+}
+

@@ -1,0 +1,42 @@
+.soul-avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.soul-avatar-group__item {
+  margin-left: -8px;
+}
+
+.soul-avatar-group__item:first-child {
+  margin-left: 0;
+}
+
+.soul-avatar-group__more-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e8e8;
+  color: #666;
+  font-weight: 600;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.soul-avatar-group__more-badge--small {
+  width: 32px;
+  height: 32px;
+  font-size: 0.75rem;
+}
+
+.soul-avatar-group__more-badge--medium {
+  width: 40px;
+  height: 40px;
+  font-size: 0.875rem;
+}
+
+.soul-avatar-group__more-badge--large {
+  width: 56px;
+  height: 56px;
+  font-size: 1rem;
+}
+

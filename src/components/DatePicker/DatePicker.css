@@ -1,0 +1,71 @@
+.soul-datepicker {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.soul-datepicker--full-width {
+  width: 100%;
+}
+
+.soul-datepicker__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.soul-datepicker__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.soul-datepicker__input {
+  width: 100%;
+  padding: 0.625rem 2.5rem 0.625rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.soul-datepicker__input:hover {
+  border-color: #b8b8b8;
+}
+
+.soul-datepicker__input:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+}
+
+.soul-datepicker--error .soul-datepicker__input {
+  border-color: #dc3545;
+}
+
+.soul-datepicker--error .soul-datepicker__input:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.soul-datepicker__icon {
+  position: absolute;
+  right: 0.75rem;
+  width: 20px;
+  height: 20px;
+  color: #666;
+  pointer-events: none;
+}
+
+.soul-datepicker__helper-text {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.soul-datepicker--error .soul-datepicker__helper-text {
+  color: #dc3545;
+}
+

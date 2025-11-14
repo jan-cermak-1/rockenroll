@@ -1,0 +1,95 @@
+.soul-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.soul-switch--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.soul-switch__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.soul-switch__track {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: #d1d1d1;
+  border-radius: 100px;
+  transition: background-color 0.2s ease;
+}
+
+.soul-switch--small .soul-switch__track {
+  width: 36px;
+  height: 20px;
+}
+
+.soul-switch--medium .soul-switch__track {
+  width: 44px;
+  height: 24px;
+}
+
+.soul-switch--large .soul-switch__track {
+  width: 52px;
+  height: 28px;
+}
+
+.soul-switch__input:checked + .soul-switch__track {
+  background-color: #0066ff;
+}
+
+.soul-switch__input:focus-visible + .soul-switch__track {
+  outline: 2px solid #0066ff;
+  outline-offset: 2px;
+}
+
+.soul-switch__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.soul-switch--small .soul-switch__thumb {
+  width: 16px;
+  height: 16px;
+}
+
+.soul-switch--medium .soul-switch__thumb {
+  width: 20px;
+  height: 20px;
+}
+
+.soul-switch--large .soul-switch__thumb {
+  width: 24px;
+  height: 24px;
+}
+
+.soul-switch--small .soul-switch__input:checked + .soul-switch__track .soul-switch__thumb {
+  transform: translateX(16px);
+}
+
+.soul-switch--medium .soul-switch__input:checked + .soul-switch__track .soul-switch__thumb {
+  transform: translateX(20px);
+}
+
+.soul-switch--large .soul-switch__input:checked + .soul-switch__track .soul-switch__thumb {
+  transform: translateX(24px);
+}
+
+.soul-switch__label {
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
