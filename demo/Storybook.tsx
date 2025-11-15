@@ -30,19 +30,46 @@ const useHashRouter = () => {
 };
 
 // Add live examples to component docs
-const createComponentDocs = (): ComponentDoc[] => {
-  const [checkboxState, setCheckboxState] = useState(false);
-  const [radioValue, setRadioValue] = useState('option1');
-  const [toggleState, setToggleState] = useState(false);
-  const [switchState, setSwitchState] = useState(false);
-  const [dropdownValue, setDropdownValue] = useState('');
-  const [selectValue, setSelectValue] = useState('');
-  const [sliderValue, setSliderValue] = useState(50);
-  const [ratingValue, setRatingValue] = useState(3);
-  const [dateValue, setDateValue] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [dialogOpen, setDialogOpen] = useState(false);
+const createComponentDocs = (states: {
+  checkboxState: boolean;
+  setCheckboxState: (v: boolean) => void;
+  radioValue: string;
+  setRadioValue: (v: string) => void;
+  toggleState: boolean;
+  setToggleState: (v: boolean) => void;
+  switchState: boolean;
+  setSwitchState: (v: boolean) => void;
+  dropdownValue: string;
+  setDropdownValue: (v: string) => void;
+  selectValue: string;
+  setSelectValue: (v: string) => void;
+  sliderValue: number;
+  setSliderValue: (v: number) => void;
+  ratingValue: number;
+  setRatingValue: (v: number) => void;
+  dateValue: string;
+  setDateValue: (v: string) => void;
+  currentPage: number;
+  setCurrentPage: (v: number) => void;
+  modalOpen: boolean;
+  setModalOpen: (v: boolean) => void;
+  dialogOpen: boolean;
+  setDialogOpen: (v: boolean) => void;
+}): ComponentDoc[] => {
+  const {
+    checkboxState, setCheckboxState,
+    radioValue, setRadioValue,
+    toggleState, setToggleState,
+    switchState, setSwitchState,
+    dropdownValue, setDropdownValue,
+    selectValue, setSelectValue,
+    sliderValue, setSliderValue,
+    ratingValue, setRatingValue,
+    dateValue, setDateValue,
+    currentPage, setCurrentPage,
+    modalOpen, setModalOpen,
+    dialogOpen, setDialogOpen
+  } = states;
 
   return componentDocsTemplate.map(doc => {
     let examples: ComponentDoc['examples'] = [];
@@ -965,6 +992,20 @@ export const StorybookApp: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
+  // Component states
+  const [checkboxState, setCheckboxState] = useState(false);
+  const [radioValue, setRadioValue] = useState('option1');
+  const [toggleState, setToggleState] = useState(false);
+  const [switchState, setSwitchState] = useState(false);
+  const [dropdownValue, setDropdownValue] = useState('');
+  const [selectValue, setSelectValue] = useState('');
+  const [sliderValue, setSliderValue] = useState(50);
+  const [ratingValue, setRatingValue] = useState(3);
+  const [dateValue, setDateValue] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   // Parse component ID from hash (#/component/button)
   const selectedComponentFromHash = hash.replace('#/component/', '') || 'button';
   const [selectedComponent, setSelectedComponent] = useState<string>(selectedComponentFromHash);
@@ -978,7 +1019,24 @@ export const StorybookApp: React.FC = () => {
     window.scrollTo(0, 0);
   }, [hash]);
 
-  const componentDocs = useMemo(() => createComponentDocs(), []);
+  const componentDocs = useMemo(() => createComponentDocs({
+    checkboxState, setCheckboxState,
+    radioValue, setRadioValue,
+    toggleState, setToggleState,
+    switchState, setSwitchState,
+    dropdownValue, setDropdownValue,
+    selectValue, setSelectValue,
+    sliderValue, setSliderValue,
+    ratingValue, setRatingValue,
+    dateValue, setDateValue,
+    currentPage, setCurrentPage,
+    modalOpen, setModalOpen,
+    dialogOpen, setDialogOpen
+  }), [
+    checkboxState, radioValue, toggleState, switchState,
+    dropdownValue, selectValue, sliderValue, ratingValue,
+    dateValue, currentPage, modalOpen, dialogOpen
+  ]);
   
   const filteredDocs = componentDocs.filter(doc =>
     doc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
