@@ -1,78 +1,92 @@
-/* Soul Design System - CSS Variables */
-
 :root {
-  /* Colors - Primary */
-  --soul-color-primary: #0066ff;
-  --soul-color-primary-hover: #0052cc;
-  --soul-color-primary-active: #003d99;
+  /* Primary Colors - Soul Design System */
+  --soul-primary-color: #0066FF;
+  --soul-primary-hover: #0052CC;
+  --soul-primary-active: #0047B3;
   
-  /* Colors - Semantic */
-  --soul-color-success: #28a745;
-  --soul-color-warning: #ffc107;
-  --soul-color-danger: #dc3545;
-  --soul-color-info: #17a2b8;
+  --soul-secondary-color: #5A6C7D;
+  --soul-secondary-hover: #4A5C6D;
   
-  /* Colors - Neutral */
-  --soul-color-white: #ffffff;
-  --soul-color-black: #1a1a1a;
-  --soul-color-gray-100: #f5f5f5;
-  --soul-color-gray-200: #e8e8e8;
-  --soul-color-gray-300: #d1d1d1;
-  --soul-color-gray-400: #b8b8b8;
-  --soul-color-gray-500: #999999;
-  --soul-color-gray-600: #666666;
+  --soul-success-color: #14804A;
+  --soul-success-hover: #0F6B3D;
   
+  --soul-warning-color: #F59E0B;
+  --soul-warning-hover: #D97706;
+  
+  --soul-error-color: #D32F2F;
+  --soul-error-hover: #C62828;
+  --soul-danger-color: #DC2626;
+  --soul-danger-hover: #B91C1C;
+
+  /* Request (Green) */
+  --soul-request-color: #16A34A;
+  --soul-request-hover: #15803D;
+
+  /* Purchase (Yellow) */
+  --soul-purchase-color: #EAB308;
+  --soul-purchase-hover: #CA8A04;
+
+  /* Text Colors */
+  --soul-text-primary: #1F2937;
+  --soul-text-secondary: #6B7280;
+  --soul-text-tertiary: #9CA3AF;
+  --soul-text-inverse: #FFFFFF;
+
+  /* Background Colors */
+  --soul-bg-primary: #FFFFFF;
+  --soul-bg-secondary: #F9FAFB;
+  --soul-bg-tertiary: #F3F4F6;
+  --soul-bg-dark: #1F2937;
+
+  /* Border Colors */
+  --soul-border-color: #E5E7EB;
+  --soul-border-hover: #D1D5DB;
+  --soul-border-focus: var(--soul-primary-color);
+
+  /* Border Radius */
+  --soul-border-radius-sm: 4px;
+  --soul-border-radius-md: 6px;
+  --soul-border-radius-lg: 8px;
+  --soul-border-radius-xl: 12px;
+  --soul-border-radius-full: 9999px;
+
   /* Spacing */
   --soul-spacing-xs: 0.25rem;
   --soul-spacing-sm: 0.5rem;
   --soul-spacing-md: 1rem;
   --soul-spacing-lg: 1.5rem;
   --soul-spacing-xl: 2rem;
-  --soul-spacing-2xl: 3rem;
-  
+
   /* Typography */
-  --soul-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  
+  --soul-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --soul-font-size-xs: 0.75rem;
   --soul-font-size-sm: 0.875rem;
   --soul-font-size-md: 1rem;
   --soul-font-size-lg: 1.125rem;
   --soul-font-size-xl: 1.25rem;
   --soul-font-size-2xl: 1.5rem;
-  --soul-font-size-3xl: 2rem;
-  
-  --soul-font-weight-normal: 400;
-  --soul-font-weight-medium: 500;
-  --soul-font-weight-semibold: 600;
-  --soul-font-weight-bold: 700;
-  
-  --soul-line-height-tight: 1.25;
-  --soul-line-height-normal: 1.5;
-  --soul-line-height-relaxed: 1.75;
-  
-  /* Border Radius */
-  --soul-radius-sm: 4px;
-  --soul-radius-md: 6px;
-  --soul-radius-lg: 8px;
-  --soul-radius-xl: 12px;
-  --soul-radius-full: 9999px;
-  
-  /* Shadows */
-  --soul-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --soul-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --soul-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --soul-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
-  
-  /* Transitions */
-  --soul-transition-fast: 0.15s ease;
-  --soul-transition-base: 0.2s ease;
-  --soul-transition-slow: 0.3s ease;
-  
-  /* Z-index */
-  --soul-z-dropdown: 100;
-  --soul-z-modal: 1000;
-  --soul-z-tooltip: 1100;
-  --soul-z-notification: 1200;
-}
 
+  /* Shadows */
+  --soul-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --soul-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --soul-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --soul-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* Focus Ring */
+  --soul-focus-ring: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  --soul-focus-ring-error: 0 0 0 3px rgba(220, 38, 38, 0.1);
+
+  /* Transitions */
+  --soul-transition-fast: 150ms ease;
+  --soul-transition-base: 200ms ease;
+  --soul-transition-slow: 300ms ease;
+
+  /* Z-Index Scale */
+  --soul-z-dropdown: 1000;
+  --soul-z-sticky: 1020;
+  --soul-z-fixed: 1030;
+  --soul-z-modal-backdrop: 1040;
+  --soul-z-modal: 1050;
+  --soul-z-popover: 1060;
+  --soul-z-tooltip: 1070;
+}

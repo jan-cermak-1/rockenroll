@@ -1,186 +1,157 @@
-/* Button Component Styles - Soul Design System */
-
 .soul-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: inherit;
+  font-family: var(--soul-font-family);
   font-weight: 600;
-  line-height: 1.5;
-  text-decoration: none;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--soul-border-radius-md);
   cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
+  transition: all var(--soul-transition-base);
   white-space: nowrap;
+  user-select: none;
 }
 
 .soul-button:focus-visible {
-  outline: 2px solid #0066ff;
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: var(--soul-focus-ring);
 }
 
-/* Sizes */
-.soul-button--small {
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
-  min-height: 32px;
-}
-
-.soul-button--medium {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  min-height: 40px;
-}
-
-.soul-button--large {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.125rem;
-  min-height: 48px;
-}
-
-/* Variants */
-.soul-button--primary {
-  background-color: #0066ff;
-  color: #ffffff;
-}
-
-.soul-button--primary:hover:not(:disabled) {
-  background-color: #0052cc;
-}
-
-.soul-button--primary:active:not(:disabled) {
-  background-color: #003d99;
-}
-
-.soul-button--secondary {
-  background-color: #f5f5f5;
-  color: #1a1a1a;
-  border: 1px solid #d1d1d1;
-}
-
-.soul-button--secondary:hover:not(:disabled) {
-  background-color: #e8e8e8;
-  border-color: #b8b8b8;
-}
-
-.soul-button--secondary:active:not(:disabled) {
-  background-color: #d1d1d1;
-}
-
-.soul-button--tertiary {
-  background-color: transparent;
-  color: #0066ff;
-  border: 1px solid #0066ff;
-}
-
-.soul-button--tertiary:hover:not(:disabled) {
-  background-color: rgba(0, 102, 255, 0.1);
-}
-
-.soul-button--tertiary:active:not(:disabled) {
-  background-color: rgba(0, 102, 255, 0.2);
-}
-
-.soul-button--danger {
-  background-color: #dc3545;
-  color: #ffffff;
-}
-
-.soul-button--danger:hover:not(:disabled) {
-  background-color: #c82333;
-}
-
-.soul-button--danger:active:not(:disabled) {
-  background-color: #bd2130;
-}
-
-.soul-button--ghost {
-  background-color: transparent;
-  color: #1a1a1a;
-}
-
-.soul-button--ghost:hover:not(:disabled) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.soul-button--ghost:active:not(:disabled) {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* States */
 .soul-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.soul-button--loading {
-  pointer-events: none;
+/* Sizes */
+.soul-button--small {
+  padding: 0.5rem 1rem;
+  font-size: var(--soul-font-size-sm);
+  height: 32px;
 }
 
+.soul-button--medium {
+  padding: 0.625rem 1.25rem;
+  font-size: var(--soul-font-size-md);
+  height: 40px;
+}
+
+.soul-button--large {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--soul-font-size-lg);
+  height: 48px;
+}
+
+/* Primary Variant (Blue) */
+.soul-button--primary {
+  background-color: var(--soul-primary-color);
+  color: var(--soul-text-inverse);
+}
+
+.soul-button--primary:hover:not(:disabled) {
+  background-color: var(--soul-primary-hover);
+}
+
+.soul-button--primary:active:not(:disabled) {
+  background-color: var(--soul-primary-active);
+}
+
+/* Secondary Variant */
+.soul-button--secondary {
+  background-color: var(--soul-secondary-color);
+  color: var(--soul-text-inverse);
+}
+
+.soul-button--secondary:hover:not(:disabled) {
+  background-color: var(--soul-secondary-hover);
+}
+
+/* Danger Variant (Red) */
+.soul-button--danger {
+  background-color: var(--soul-danger-color);
+  color: var(--soul-text-inverse);
+}
+
+.soul-button--danger:hover:not(:disabled) {
+  background-color: var(--soul-danger-hover);
+}
+
+/* Ghost Variant */
+.soul-button--ghost {
+  background-color: transparent;
+  color: var(--soul-text-primary);
+  border: 1px solid var(--soul-border-color);
+}
+
+.soul-button--ghost:hover:not(:disabled) {
+  background-color: var(--soul-bg-secondary);
+  border-color: var(--soul-border-hover);
+}
+
+/* Success Variant */
+.soul-button--success {
+  background-color: var(--soul-success-color);
+  color: var(--soul-text-inverse);
+}
+
+.soul-button--success:hover:not(:disabled) {
+  background-color: var(--soul-success-hover);
+}
+
+/* Warning Variant */
+.soul-button--warning {
+  background-color: var(--soul-warning-color);
+  color: var(--soul-text-inverse);
+}
+
+.soul-button--warning:hover:not(:disabled) {
+  background-color: var(--soul-warning-hover);
+}
+
+/* Request Variant (Green - like Soul) */
+.soul-button--request {
+  background-color: var(--soul-request-color);
+  color: var(--soul-text-inverse);
+}
+
+.soul-button--request:hover:not(:disabled) {
+  background-color: var(--soul-request-hover);
+}
+
+/* Purchase Variant (Yellow - like Soul) */
+.soul-button--purchase {
+  background-color: var(--soul-purchase-color);
+  color: var(--soul-text-inverse);
+}
+
+.soul-button--purchase:hover:not(:disabled) {
+  background-color: var(--soul-purchase-hover);
+}
+
+/* Full Width */
 .soul-button--full-width {
   width: 100%;
 }
 
-/* Loading spinner */
-.soul-button__spinner {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1em;
-  height: 1em;
+/* Loading State */
+.soul-button--loading {
+  position: relative;
+  pointer-events: none;
 }
 
-.soul-button__spinner-icon {
-  width: 100%;
-  height: 100%;
-  animation: soul-button-spin 1s linear infinite;
+.soul-button--loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
 }
 
-.soul-button__spinner-circle {
-  stroke: currentColor;
-  stroke-dasharray: 50;
-  stroke-dashoffset: 0;
-  animation: soul-button-spinner-dash 1.5s ease-in-out infinite;
-}
-
-@keyframes soul-button-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
-
-@keyframes soul-button-spinner-dash {
-  0% {
-    stroke-dashoffset: 50;
-  }
-  50% {
-    stroke-dashoffset: 12.5;
-  }
-  100% {
-    stroke-dashoffset: 50;
-  }
-}
-
-/* Icons */
-.soul-button__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.soul-button__icon svg {
-  width: 1em;
-  height: 1em;
-}
-
-.soul-button__text {
-  display: inline-block;
-}
-
