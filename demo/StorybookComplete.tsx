@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import './Storybook.css';
 import { componentDocsTemplate, ComponentDoc, categories } from './componentData';
 import { 
@@ -8,26 +8,6 @@ import {
   Pagination, ProgressBar, Radio, Rating, Select, SkeletonLoader, Slider,
   Spinner, Stack, Stepper, Switch, Table, Tabs, Textarea, Toggle, Tooltip
 } from '../src';
-
-// Hash-based routing for GitHub Pages
-const useHashRouter = () => {
-  const [hash, setHash] = useState(window.location.hash);
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      setHash(window.location.hash);
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  const navigate = (newHash: string) => {
-    window.location.hash = newHash;
-  };
-
-  return { hash, navigate };
-};
 
 // Add live examples to component docs
 const createComponentDocs = (): ComponentDoc[] => {
@@ -961,22 +941,9 @@ const createComponentDocs = (): ComponentDoc[] => {
 };
 
 export const StorybookApp: React.FC = () => {
-  const { hash, navigate } = useHashRouter();
+  const [selectedComponent, setSelectedComponent] = useState<string>('button');
   const [searchQuery, setSearchQuery] = useState('');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-
-  // Parse component ID from hash (#/component/button)
-  const selectedComponentFromHash = hash.replace('#/component/', '') || 'button';
-  const [selectedComponent, setSelectedComponent] = useState<string>(selectedComponentFromHash);
-
-  // Update selected component when hash changes
-  useEffect(() => {
-    const componentId = hash.replace('#/component/', '') || 'button';
-    setSelectedComponent(componentId);
-    
-    // Scroll to top when component changes
-    window.scrollTo(0, 0);
-  }, [hash]);
 
   const componentDocs = useMemo(() => createComponentDocs(), []);
   
@@ -992,10 +959,6 @@ export const StorybookApp: React.FC = () => {
     name: category,
     docs: filteredDocs.filter(doc => doc.category === category),
   }));
-
-  const handleComponentSelect = (componentId: string) => {
-    navigate(`/component/${componentId}`);
-  };
 
   return (
     <div className="storybook">
@@ -1038,7 +1001,7 @@ export const StorybookApp: React.FC = () => {
                       <button
                         key={doc.id}
                         className={`storybook__nav-item ${selectedComponent === doc.id ? 'active' : ''}`}
-                        onClick={() => handleComponentSelect(doc.id)}
+                        onClick={() => setSelectedComponent(doc.id)}
                       >
                         {doc.name}
                       </button>
@@ -1125,3 +1088,4 @@ export const StorybookApp: React.FC = () => {
     </div>
   );
 };
+
